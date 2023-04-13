@@ -39,6 +39,14 @@ main {
             color: white;
         }
 
+        article:first-child .testimonial img {
+           border: rgba(158,119,206,255) solid 0.2rem;
+        }
+        
+        article:nth-child(4) .testimonial img {
+            border: hsl(263, 55%, 52%) solid 0.2rem;
+         }
+
         article:nth-child(2) {
             background-color: hsl(217, 19%, 35%);
             color: white;
