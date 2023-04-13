@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+body {
+    font-family: 'Barlow Semi Condensed';
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background-color: hsl(210, 46%, 95%);
+}
+
+main {
+    width: 90%;
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+    margin-block: 10vh;
+}
+    article {
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: hsl(0, 0%, 81%) 1rem 1rem 1rem;
+    }
+        article:hover {
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: 0.5s;
+            box-shadow: none;
+        }
+        article:first-child {
+            position: relative;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            background-color: hsl(263, 55%, 52%);
+            background-image: urL(./images/bg-pattern-quotation.svg);
+            background-repeat: no-repeat;
+            background-position: 80% 0;
+            color: white;
+        }
+
+        article:nth-child(2) {
+            background-color: hsl(217, 19%, 35%);
+            color: white;
+        }
+
+        article:nth-child(3) {
+            background-color: white;
+            color: hsl(217, 19%, 35%)
+        }
+
+        article:nth-child(4) {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            background-color: hsl(219, 29%, 14%);
+            color: white
+        }
+
+        article:last-child {
+            grid-column-start: 4;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            background-color: white;
+            color: hsl(217, 19%, 35%);
+        }
+
+        article p {
+            opacity: 0.7;
+            line-height: 1.5rem;
+        }
+
+        .testimonial {
+            display: flex;
+            align-items: center;
+        }
+            .testimonial img {
+                border-radius: 50%;
+                margin-right: 1rem;
+            }
+                hgroup h1, hgroup p {
+                    margin-block: 0;
+                }
+                hgroup p{
+                    opacity: 0.5;
+                }
+footer {
+    position: fixed;
+    bottom: 1vh;
+    text-align: center;
+}
+
+@media screen and (max-aspect-ratio: 1) {
+    main {
+        grid-template-columns: auto;
+    }
+        article:first-child {
+            grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        article:nth-child(4) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+
+        }
+
+        article:last-child {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: unset;
+            grid-row-end: unset;
+        }
+
+    footer {
+        position: static;
+        margin-block-end: 1vh;
+    }
+}
